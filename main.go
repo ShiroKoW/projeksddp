@@ -72,7 +72,8 @@ func respondJSON(w http.ResponseWriter, status int, payload interface{}) {
 
 // Function handleError untuk mengirimkan pesan error ke client
 func handleError(w http.ResponseWriter, status int, message string) {
-	respondJSON(w, status, map[string]string{"error": message}) // Kirim pesan error dalam format JSON
+	respondJSON(w, status, map[string]string{"error": message}) // Kirim pesan error dalam format JSON,
+	//Map sangat fleksibel untuk menyimpan data dalam bentuk pasangan key-value.
 }
 
 // Function getReturs untuk mendapatkan semua data retur dari database
